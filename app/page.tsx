@@ -15,8 +15,8 @@ export default function Home() {
         </p>
       </section>
       <div className="flex items-center justify-center gap-6">
-        <Button>Learn More</Button>
-        <Button>Enroll Now</Button>
+        <Button variant={"secondary"}>Learn More</Button>
+        <Button variant={"default"}>Enroll Now</Button>
       </div>
     </main>
   );
