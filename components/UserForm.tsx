@@ -15,22 +15,27 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { useForm } from "react-hook-form";
+// import { useForm } from "react-hook-form";
 
 const formSchema = z.object({
-  username: z.string().min(2, {
+  name: z.string().min(5, {
     message: "Username must be at least 5 characters.",
   }),
-  email: z.string().email(),
+  email: z
+    .string()
+    .min(5, {
+      message: "Email must be at least 5 characters.",
+    })
+    .email("This is not a valid email."),
 });
 
 export function ProfileForm() {
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
-      username: "",
-    },
+    // defaultValues: {
+    //   username: "",
+    // },
   });
 
   // 2. Define a submit handler.
@@ -39,4 +44,43 @@ export function ProfileForm() {
     // ✅ This will be type-safe and validated.
     console.log(values);
   }
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <FormField
+          control={form.control}
+          name="name"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Name</FormLabel>
+              <FormControl>
+                <Input placeholder="shadcn" {...field} />
+              </FormControl>
+              <FormDescription>
+                This is your public display name.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Email</FormLabel>
+              <FormControl>
+                <Input placeholder="test@gmail.com" {...field} />
+              </FormControl>
+              <FormDescription>
+                This is your public display email.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <Button type="submit">Submit</Button>
+      </form>
+    </Form>
+  );
 }

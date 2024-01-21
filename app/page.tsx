@@ -1,6 +1,6 @@
 import Nav from "@/components/Nav";
+import { ProfileForm } from "@/components/UserForm";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -17,6 +17,9 @@ export default function Home() {
       <div className="flex items-center justify-center gap-6">
         <Button variant={"secondary"}>Learn More</Button>
         <Button variant={"default"}>Enroll Now</Button>
+      </div>
+      <div className="flex flex-col items-center py-12 gap-8 border-gray-200">
+        <ProfileForm />
       </div>
     </main>
   );
