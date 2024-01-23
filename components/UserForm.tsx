@@ -54,10 +54,10 @@ export function ProfileForm() {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input placeholder="" {...field} />
               </FormControl>
               <FormDescription>
-                This is your public display name.
+                {/* This is your public display name. */}*Required
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -73,7 +73,7 @@ export function ProfileForm() {
                 <Input placeholder="test@gmail.com" {...field} />
               </FormControl>
               <FormDescription>
-                This is your public display email.
+                {/* This is your public display email. */}*Required
               </FormDescription>
               <FormMessage />
             </FormItem>
