@@ -3,6 +3,7 @@ import { CardWithForm } from "@/components/CardForm";
 import { CommandDemo } from "@/components/CommandForm";
 import { DrawerDemo } from "@/components/DrawerForm";
 import Nav from "@/components/Nav";
+import { TableDemo } from "@/components/TableForm";
 import { ProfileForm } from "@/components/UserForm";
 import { Button } from "@/components/ui/button";
 
@@ -30,12 +31,17 @@ export default function Home() {
         <div className="flex flex-row items-center gap-8 ">
           <CalendarDemo />
           <CardWithForm />
-          <div>
-            <CommandDemo />
-          </div>
         </div>
       </section>
-      <CommandDemo />
+      <div>
+        <CardWithForm />
+      </div>
+      <div>
+        <TableDemo />
+      </div>
+      <div>
+        <CommandDemo />
+      </div>
     </main>
   );
 }
