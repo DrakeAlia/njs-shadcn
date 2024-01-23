@@ -21,21 +21,15 @@ export default function Home() {
         <Button variant={"secondary"}>Learn More</Button>
         <Button variant={"default"}>Enroll Now</Button>
       </div>
-      {/* <div className="flex flex-col items-center m-3 px-5 py-8 gap-8 rounded-2xl border-2 border-gray-700">
-        <ProfileForm />
-      </div> */}
       <section className="flex flex-col justify-center">
         <div className="m-20 p-9 px-5 py-8 rounded-2xl border-2 border-gray-700">
           <ProfileForm />
         </div>
-        <div className="flex flex-row items-center gap-8 ">
+        <div className="flex flex-row items-center gap-8 mb-4">
           <CalendarDemo />
           <CardWithForm />
         </div>
       </section>
-      <div>
-        <CardWithForm />
-      </div>
       <div>
         <TableDemo />
       </div>
