@@ -14,11 +14,15 @@ import {
 } from "@/components/page-header";
 import { Announcement } from "@/components/announcement";
 import { Nav } from "@/components/Nav";
+import MainNav from "@/components/MainNav";
 
 
 export default function Home() {
   return (
     <div className="container relative">
+      <div className="p-12">
+        <MainNav />
+      </div>
       <PageHeader>
         <Announcement />
         <PageHeaderHeading>Build your component library</PageHeaderHeading>
@@ -31,12 +35,13 @@ export default function Home() {
           <Button variant={"secondary"}>GitHub</Button>
         </PageActions>
       </PageHeader>
+      <div className="m-14 px-5 py-8">
+      <ProfileForm />
+      </div>
       <Nav className="[&>a:first-child]:text-primary" />
     </div>
   );
 }
-
-
 
 
 // export default function Home() {
