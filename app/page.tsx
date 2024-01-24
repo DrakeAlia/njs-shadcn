@@ -1,8 +1,8 @@
+import Nav from "@/components/Nav";
 import { CalendarDemo } from "@/components/CalendarForm";
 import { CardWithForm } from "@/components/CardForm";
 import { CommandDemo } from "@/components/CommandForm";
 import { DrawerDemo } from "@/components/DrawerForm";
-import Nav from "@/components/Nav";
 import { TableDemo } from "@/components/TableForm";
 import { ProfileForm } from "@/components/UserForm";
 import { Button } from "@/components/ui/button";
